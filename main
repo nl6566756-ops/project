@@ -1,5 +1,4 @@
 from functions import input_scores, calculate_average, find_min_max, analyze_pass_fail
-
 def main():
     scores = input_scores()
 
