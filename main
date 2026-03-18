@@ -1,0 +1,21 @@
+from functions import input_scores, calculate_average, find_min_max, analyze_pass_fail
+
+def main():
+    scores = input_scores()
+
+    if isinstance(scores, dict) and "error" in scores:
+        print(scores["error"])
+        return
+
+    avg = calculate_average(scores)
+    min_max = find_min_max(scores)
+    analysis = analyze_pass_fail(scores)
+
+    print("\n--- RESULTS ---")
+    print("Scores:", scores)
+    print("Average:", avg)
+    print("Min & Max:", min_max)
+    print("Pass/Fail:", analysis)
+
+if __name__ == "__main__":
+    main()
